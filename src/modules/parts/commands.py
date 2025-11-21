@@ -1,5 +1,5 @@
-import time
-from modules.parts.bot import bot, keyboards, types
+from telebot import types
+from .bot import bot, keyboards
 
 
 @bot.message_handler(commands=["start"])
@@ -47,7 +47,6 @@ def getInfo(message):
 
 
 def finish_interaction(chat_id):
-    time.sleep(1)
     bot.send_message(
         chat_id,
         "Чем я могу ещё помочь?",

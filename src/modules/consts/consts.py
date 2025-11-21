@@ -30,3 +30,5 @@ myTypes = Types(
     inline="inline",
     row="row",
 )
+
+user_states = {}

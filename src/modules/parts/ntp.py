@@ -1,6 +1,6 @@
 import random
-from modules.parts.bot import bot
-from modules.parts.commands import finish_interaction
+from .bot import bot
+from .commands import finish_interaction
 
 
 def get_random_int(min, max):

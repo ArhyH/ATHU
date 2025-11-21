@@ -1,5 +1,4 @@
 import modules.parts
-import modules.parts.weather
 from modules.parts.bot import bot
 from modules.helpers.helpers import initButtons
 from modules.consts.consts import myKeyboards, myTypes

@@ -8,6 +8,10 @@ commandsList = [
         "command": "/weather",
     },
     {
+        "name": "🖼️ Сжать картинку",
+        "command": "/tinyimg",
+    },
+    {
         "name": "info",
         "command": "/info",
     },

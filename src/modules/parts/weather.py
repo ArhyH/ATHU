@@ -1,8 +1,8 @@
 import os
 import requests
 from dotenv import load_dotenv
-from modules.parts.bot import bot
-from modules.parts.commands import finish_interaction
+from .bot import bot
+from .commands import finish_interaction
 
 load_dotenv()
 
@@ -79,10 +79,3 @@ def process_weather_request(message):
             text=f"❌ Город '{city}' не найден. Проверь правильность написания и попробуй снова.",
         )
         finish_interaction(message.chat.id)
-
-
-@bot.callback_query_handler(func=lambda call: call.data == "/weather")
-def weather_callback(call):
-    bot.answer_callback_query(call.id)
-    message = bot.send_message(call.message.chat.id, "Введи название города:")
-    bot.register_next_step_handler(message, process_weather_request)
